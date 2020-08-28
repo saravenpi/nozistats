@@ -16,7 +16,7 @@ var hourSchema = new mongoose.Schema({
 
 })
 
-var hour = mongoose.model("hour",dataSchema);
+var hour = mongoose.model("hour", hourSchema);
 
 
 
@@ -25,15 +25,15 @@ app.get('/', function(req, res){
 });
 
 app.get("/new", function(req,res) {
-  hour.find({ description: "haha" }).exec(function(err, doc) {
+  hour.findOne({ description: "haha" }).exec(function(err, doc) {
     doc.stats = doc[0].stats + 1;
     doc.save();
     res.send("success")
 
 });
-})
+});
 app.get('/stats', function(req, res){
-  hour.find({ description: "haha" }).exec(function(err, doc) {
+  hour.findOne({ description: "haha"}).exec(function(err, doc) {
     res.send(doc[0].stats)
 
 });
