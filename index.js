@@ -1,11 +1,11 @@
 var app = require('express')();
 var http = require('http').Server(app);
-
+Var extazy = require('dotenv').config()
 var port = 3000;
 
 var mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect(extazy.MONGODB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGODB, {
 
 var hourSchema = new mongoose.Schema({
   description: {type: String, default: "haha"},
-  stats: Integer
+  stats: Number
 
 })
 
@@ -40,8 +40,8 @@ app.get("/new", function(req,res) {
 
 app.get('/stats', function(req, res){
 
-  hour.findOne({ description: "haha"}).exec(function(err, doc) {
-    res.send(doc.stats)
+  hour.find({ description: "haha"}).exec(function(err, doc) {
+    res.send(doc)
 
 });
 
