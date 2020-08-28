@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB, {
 
 var hourSchema = new mongoose.Schema({
   description: {type: String, default: "haha"},
-  stats: Int
+  stats: Integer
 
 })
 
