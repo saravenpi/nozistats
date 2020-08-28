@@ -1,7 +1,8 @@
 var app = require('express')();
 var http = require('http').Server(app);
 
-var port = process.env.PORT || 3000;
+var port = 3000;
+
 const mongoose = require("mongoose");
 
 mongoose.connect(process.env.MONGODB, {
@@ -32,13 +33,16 @@ app.get("/new", function(req,res) {
 
 });
 });
+
+
+
 app.get('/stats', function(req, res){
   hour.findOne({ description: "haha"}).exec(function(err, doc) {
     res.send(doc[0].stats)
 
 });
 
-
+});
 http.listen(port, function(){
   console.log('listening on *:' + port);
 });
