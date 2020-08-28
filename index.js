@@ -40,8 +40,8 @@ app.get("/new", function(req,res) {
 
 app.get('/stats', function(req, res){
 
-  hour.findOne({ description: "haha"}).exec(function(err, doc) {
-    res.send(doc.stats)
+  hour.find({ description: "haha"}).exec(function(err, doc) {
+    res.send(doc)
 
 });
 
