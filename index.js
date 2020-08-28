@@ -3,7 +3,7 @@ var http = require('http').Server(app);
 
 var port = 3000;
 
-const mongoose = require("mongoose");
+var mongoose = require("mongoose");
 
 mongoose.connect(process.env.MONGODB, {
   useNewUrlParser: true,
