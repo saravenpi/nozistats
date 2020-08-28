@@ -1,11 +1,11 @@
 var app = require('express')();
 var http = require('http').Server(app);
-Var extazy = require('dotenv').config()
+
 var port = 3000;
 
 var mongoose = require("mongoose");
 
-mongoose.connect(extazy.MONGODB, {
+mongoose.connect(process.env.MONGODB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
