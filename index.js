@@ -9,6 +9,9 @@ let file = editJsonFile(`${__dirname}/stats.json`);
 app.get('/', function(req, res){
   res.sendFile(`${__dirname}/index.html`);
 });
+app.get('/stats', function(req, res){
+  res.sendFile(`${__dirname}/stats.json`);
+});
 
 io.on('connection', function(socket){
   var additional = stats.hourcurrent + 1;
