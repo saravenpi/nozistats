@@ -26,23 +26,29 @@ app.get('/', function(req, res){
 });
 
 app.get("/new", function(req,res) {
+
   hour.findOne({ description: "haha" }).exec(function(err, doc) {
     doc.stats = doc[0].stats + 1;
     doc.save();
     res.send("success")
 
 });
+
 });
 
 
 
 app.get('/stats', function(req, res){
+
   hour.findOne({ description: "haha"}).exec(function(err, doc) {
     res.send(doc[0].stats)
 
 });
 
 });
+
+
+
 http.listen(port, function(){
   console.log('listening on *:' + port);
 });
