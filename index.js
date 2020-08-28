@@ -1,22 +1,43 @@
 var app = require('express')();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var port = process.env.PORT || 3000;
-const editJsonFile = require("edit-json-file");
-var stats = require(`${__dirname}/stats.json`)
 
-let file = editJsonFile(`${__dirname}/stats.json`);
+var port = process.env.PORT || 3000;
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.MONGODB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+
+var hourSchema = new mongoose.Schema({
+  description: {type: String, default: "haha"},
+  stats: Int
+
+})
+
+var hour = mongoose.model("hour",dataSchema);
+
+
+
 app.get('/', function(req, res){
   res.sendFile(`${__dirname}/index.html`);
 });
+
+app.get("/new", function(req,res) {
+  hour.find({ description: "haha" }).exec(function(err, doc) {
+    doc.stats = doc[0].stats + 1;
+    doc.save();
+    res.send("success")
+
+});
+})
 app.get('/stats', function(req, res){
-  res.sendFile(`${__dirname}/stats.json`);
+  hour.find({ description: "haha" }).exec(function(err, doc) {
+    res.send(doc[0].stats)
+
 });
 
-io.on('connection', function(socket){
-  var additional = stats.hourcurrent + 1;
-  file.set(hourcurrent, additional);
-});
 
 http.listen(port, function(){
   console.log('listening on *:' + port);
