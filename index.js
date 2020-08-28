@@ -5,7 +5,7 @@ var port = 3000;
 
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://root:gbJsY4SH653xaBmx@cluster0-rm6b9.mongodb.net/pomme", {
+mongoose.connect(process.env.MONGODB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
