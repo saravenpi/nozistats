@@ -1,6 +1,6 @@
 var app = require('express')();
 var http = require('http').Server(app);
-
+require('dotenv').config()
 var port = 3000;
 
 const mongoose = require("mongoose");
