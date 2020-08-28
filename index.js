@@ -1,5 +1,5 @@
-var app = require('express')();
-var http = require('http').Server(app);
+const express = require("express");
+const app = express();
 
 var port = 3000;
 
@@ -48,7 +48,6 @@ app.get('/stats', function(req, res){
 });
 
 
-
-http.listen(port, function(){
-  console.log('listening on *:' + port);
+const listener = app.listen(port, () => {
+  console.log("Your app is listening on port " + listener.address().port);
 });
