@@ -22,7 +22,7 @@ var hour = mongoose.model("hour", hourSchema);
 
 
 app.get('/', function(req, res){
-  res.sendFile(`${__dirname}/index.html`);
+  res.sendFile('./index.html');
 });
 
 app.get("/new", function(req,res) {
