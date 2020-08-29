@@ -1,8 +1,6 @@
 const express = require("express");
 const app = express();
 
-var port = 3000;
-
 const mongoose = require("mongoose");
 
 mongoose.connect(process.env.MONGODB, {
@@ -19,10 +17,10 @@ var hourSchema = new mongoose.Schema({
 
 var hour = mongoose.model("hour", hourSchema);
 
-
-
 app.get('/', function(req, res){
-  res.sendFile('./index.html');
+
+  res.sendFile(`${__dirname}/index.html`);
+
 });
 
 app.get("/new", function(req,res) {
