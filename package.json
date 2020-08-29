@@ -16,7 +16,8 @@
     "node-cron": "^2.0.3",
     "needle": "^2.5.0",
     "cors": "^2.8.5",
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "request": "^2.88.2"
   },
   "scripts": {
     "start": "node lib/router.js"
