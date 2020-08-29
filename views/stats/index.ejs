@@ -34,9 +34,11 @@ var myChart = new Chart(ctx, {
     data: {
         //labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],
         datasets: [{
+
             label: 'Users',
             data: [<%= data.array %>] ,
-
+            backgroundColor: window.chartColors.blue,
+					  borderColor: window.chartColors.blue,
             borderWidth: 1
         }]
     },
