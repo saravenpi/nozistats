@@ -35,7 +35,7 @@ function genarray() {
 	 i = 23
 
 	while(i > 1) {
-		 j = i+1
+
 		 first = date_ob.getHours()-i
 		 second = date_ob.getHours()-j
 		 if(first < 0){
@@ -46,6 +46,7 @@ function genarray() {
 		};
 		final.push(`${first}-${second}h`)
 		 i = i-1
+		 j = i+1
 	}
 	return final
 
