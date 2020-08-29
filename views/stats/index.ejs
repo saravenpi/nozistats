@@ -35,7 +35,7 @@ var myChart = new Chart(ctx, {
         //labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],
         datasets: [{
             label: 'Users',
-            data: <%= data.array %> ,
+            data: [<%= data.array %>] ,
 
             borderWidth: 1
         }]
