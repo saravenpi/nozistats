@@ -62,7 +62,7 @@ var myChart = new Chart(ctx, {
 
             label: 'Users traffic',
             data: [<%= data.array %>,<%= data.traffic %>],
-            backgroundColor: "#00D1B2",
+            backgroundColor: "#a4f5e9",
             borderColor: "#00D1B2",
             borderWidth: 1
         }]
@@ -70,9 +70,13 @@ var myChart = new Chart(ctx, {
     options: {
         scales: {
             yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
+							ticks: {
+						min: 0,
+						max: 100,
+
+						// forces step size to be 5 units
+						stepSize: 5
+					}
             }]
         }
     }
