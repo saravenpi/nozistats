@@ -1,14 +1,14 @@
-
-
-
 <html>
 
+
 <head>
-	<title>Line Chart</title>
+
+<title>Noziro Stats</title>
 
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
 
 	<style>
 	canvas{
@@ -32,12 +32,12 @@ var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23'],
+        //labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23'],
         datasets: [{
 
             label: 'Traffic',
             data: [<%= data.array %>],
-          
+
             borderWidth: 1
         }]
     },
