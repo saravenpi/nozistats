@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<div class="chart-container" style="position: relative; height:400px; width:800px">
+	<div class="chart-container" style="position: relative; height:100%; width:100%">
 <canvas id="myChart"></canvas>
 	</div>
 	<br>
@@ -60,7 +60,7 @@ var myChart = new Chart(ctx, {
         labels: genarray(),
         datasets: [{
 
-            label: 'Traffic',
+            label: 'Users traffic',
             data: [<%= data.array %>],
             backgroundColor: "#00D1B2",
             borderColor: "#00D1B2",
