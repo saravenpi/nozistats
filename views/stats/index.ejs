@@ -28,6 +28,9 @@
 
 
 <script>
+let date_ob = new Date();
+let hours = date_ob.getHours();
+console.log(hours)
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'line',
