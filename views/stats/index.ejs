@@ -32,9 +32,9 @@ function genarray() {
 	let date_ob = new Date();
 
 	var final = [];
-	 i = 21
+	 i = 23
 	 j = i+1
-	while(i > -2) {
+	while(i > 0) {
 
 		 first = date_ob.getHours()-j
 		 second = date_ob.getHours()-i
@@ -48,7 +48,7 @@ function genarray() {
 		 i = i-1
 		 j = i+1
 	}
-	return final
+	return final.reverse()
 
 }
 
