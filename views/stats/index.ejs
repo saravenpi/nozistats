@@ -53,12 +53,12 @@ function genarray() {
 }
 
 
-
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: genarray(),
+        datasets: [{
 
             label: 'Traffic',
             data: [<%= data.array %>],
