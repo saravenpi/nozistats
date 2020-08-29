@@ -1,1 +1,56 @@
-<%= data.array %> 
+
+
+
+<html>
+
+<head>
+	<title>Line Chart</title>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
+
+	<style>
+	canvas{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+
+<body>
+	<div style="width:75%;" height="300px">
+<canvas id="myChart" width="400" height="400"></canvas>
+	</div>
+	<br>
+	<br>
+
+
+<script>
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        //labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],
+        datasets: [{
+            label: 'Users',
+            data: <%= data.array %> ,
+
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+</body>
+
+</html>
