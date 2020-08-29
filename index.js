@@ -39,7 +39,7 @@ app.get("/new", function(req,res) {
 app.get('/stats', function(req, res){
 
   hour.find({ description: "haha"}).exec(function(err, doc) {
-    res.send(doc.stats)
+    res.send(`${doc[0].stats}`)
 
 });
 
