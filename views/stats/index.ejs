@@ -25,11 +25,26 @@
 
 
 <script>
-let date_ob = new Date();
-let hours = date_ob.getHours();
-console.log(hours)
 
-var vingttrois = `${hours}-${hours+1}h`
+
+
+function genarray() {
+	let date_ob = new Date();
+	let hours = date_ob.getHours();
+	var final = [];
+	 i = 23
+
+	while(i > 1) {
+		 j = i+1
+		final.push(`${hours - i}-${hours-j}h`)
+		 i = i-1
+	}
+	return final
+
+}
+
+console.log(genarray())
+
 
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
