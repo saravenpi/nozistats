@@ -46,6 +46,4 @@ app.get('/stats', function(req, res){
 });
 
 
-const listener = app.listen(3000, () => {
-console.log("HERE WE GOOOOOOOOOO")
-});
+const listener = app.listen(process.env.PORT || 5000)
