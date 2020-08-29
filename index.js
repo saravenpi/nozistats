@@ -48,6 +48,6 @@ app.get('/stats', function(req, res){
 });
 
 
-const listener = app.listen(port, () => {
-  console.log("Your app is listening on port " + listener.address().port);
+const listener = app.listen(3000, () => {
+console.log("HERE WE GOOOOOOOOOO")
 });
