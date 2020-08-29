@@ -30,13 +30,13 @@
 
 function genarray() {
 	let date_ob = new Date();
-	let hours = date_ob.getHours();
+
 	var final = [];
 	 i = 23
 
 	while(i > 1) {
 		 j = i+1
-		final.push(`${hours - i}-${hours-j}h`)
+		final.push(`${date_ob.getHours(); - i}-${date_ob.getHours();-j}h`)
 		 i = i-1
 	}
 	return final
