@@ -58,21 +58,9 @@ function genarray() {
 function lastdaycount() {
 
 var array = [<%= data.array %>,<%= data.traffic %>]
-
-var lenght = Object.keys(array).length
-console.log(lenght)
-i = 0
- count = 0
-while (i <= lenght) {
-	 count = count + array[i]
-	i = i + 1
-console.log(count)
-
-if ( i <= lenght) {
-	return count
-}
-}
-console.log(count)
+var total=0;
+for(var i in array) { total += arr[i]; }
+return total
 
 
 }
