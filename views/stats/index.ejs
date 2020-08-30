@@ -21,6 +21,9 @@
 <br>
 	<div class="chart-container" style="position: relative; height:90%; width:90%">
 <canvas id="myChart"></canvas>
+<h1><u>Nombres de lancements durant les dernières 24h:<u></h1>
+
+<p id="count"></p>
 	</div>
 	<br>
 	<br>
@@ -52,6 +55,23 @@ function genarray() {
 	return array
 }
 
+function lastdaycount() {
+
+var array = [<%= data.array %>,<%= data.traffic %>]
+
+var lenght = Object.keys(answers).length
+
+i = 0
+count = 0
+while (i <= lenght) {
+	count = count + array[i]
+	i = i + 1
+}
+return count
+
+}
+
+document.getElementById('count').innerHTML = lastdaycount();
 
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
