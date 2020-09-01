@@ -126,11 +126,11 @@ var ctx2 = document.getElementById('daychart');
 var daychart = new Chart(ctx2, {
     type: 'line',
     data: {
-        labels: genhourarray(),
+        labels: ["1","2","3","4","5","6","7"],
         datasets: [{
 
             label: 'Users traffic',
-            data: [<%= data.array %>,<%= data.traffic %>],
+            data: [<%= data.day %>,lastdaycount()],
             backgroundColor: "#ffdd57",
             borderColor: "#e3b502",
             borderWidth: 1
