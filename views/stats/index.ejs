@@ -96,7 +96,7 @@ var hourchart = new Chart(ctx, {
         labels: genhourarray(),
         datasets: [{
 
-            label: 'Users traffic',
+            label: 'Users traffic every hour',
             data: [<%= data.array %>,<%= data.traffic %>],
             backgroundColor: "#a4f5e9",
             borderColor: "#00D1B2",
@@ -129,7 +129,7 @@ var daychart = new Chart(ctx2, {
         labels: ["1","2","3","4","5","6","7"],
         datasets: [{
 
-            label: 'Users traffic',
+            label: 'Users traffic every day',
             data: [<%= data.day %>,lastdaycount()],
             backgroundColor: "#ffdd57",
             borderColor: "#e3b502",
