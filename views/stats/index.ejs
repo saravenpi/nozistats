@@ -35,8 +35,8 @@
 <canvas id="hourchart"></canvas>
 	</div>
 	<div class="notification is-primary is-medium">
-	Amount of users the last 24 hours:
-<span class="tag is-info is-large" id="count"></span>
+	Amount of users during the last hour:
+<span class="tag is-info is-large" id="hourcount"><%= data.traffic %></span>
 
 	</div>
 
@@ -49,6 +49,11 @@
 
 <div class="chart-container" style="position: relative; height:100%; width:100%">
 <canvas id="daychart"></canvas>
+</div>
+<div class="notification is-warning is-medium">
+Amount of users the last 24 hours:
+<span class="tag is-info is-large" id="count"></span>
+
 </div>
 
 <script>
