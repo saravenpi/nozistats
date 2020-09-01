@@ -32,9 +32,7 @@
 </div>
 
 	<div class="chart-container" style="position: relative; height:100%; width:100%">
-<canvas id="myChart"></canvas>
-
-
+<canvas id="hourchart"></canvas>
 	</div>
 	<div class="notification is-primary is-medium">
 	Amount of users the last 24 hours:
@@ -42,6 +40,16 @@
 
 	</div>
 
+
+
+	<div class="notification is-warning title is-3">
+	<u>Chart of the number of users per day during the last week, refreshed everyday:</u>
+</div>
+
+
+<div class="chart-container" style="position: relative; height:100%; width:100%">
+<canvas id="daychart"></canvas>
+</div>
 
 <script>
 
@@ -81,8 +89,8 @@ return total
 
 document.getElementById('count').innerHTML = lastdaycount();
 
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
+var ctx = document.getElementById('hourchart');
+var hourchart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: genarray(),
