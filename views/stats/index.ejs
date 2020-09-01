@@ -36,7 +36,7 @@
 	</div>
 	<div class="notification is-primary is-medium">
 	Amount of users during the last hour:
-<span class="tag is-info is-large" id="hourcount"><%= data.traffic %></span>
+<span class="tag is-info is-large" id="hourcount"></span>
 
 	</div>
 
@@ -93,6 +93,7 @@ return total
 }
 
 document.getElementById('count').innerHTML = lastdaycount();
+document.getElementById("hourcount").innerHTML = <%= data.traffic %>;
 
 var ctx = document.getElementById('hourchart');
 var hourchart = new Chart(ctx, {
