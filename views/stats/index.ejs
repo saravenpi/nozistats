@@ -30,32 +30,36 @@
 	<div class="notification is-primary title is-3">
   <u>Chart of the number of users per hour during the last 24 hours, refreshed every hour:</u>
 </div>
-
+<br>
 	<div class="chart-container" style="position: relative; height:100%; width:100%">
+
 <canvas id="hourchart"></canvas>
+
 	</div>
+<br>
 	<div class="notification is-primary is-medium">
 	Amount of users during the last hour:
 <span class="tag is-info is-large" id="hourcount"></span>
 
 	</div>
-
+<br>
 
 
 	<div class="notification is-warning title is-3">
 	<u>Chart of the number of users per day during the last week, refreshed everyday:</u>
 </div>
 
-
+<br>
 <div class="chart-container" style="position: relative; height:100%; width:100%">
 <canvas id="daychart"></canvas>
 </div>
+<br>
 <div class="notification is-warning is-medium">
 Amount of users the last 24 hours:
 <span class="tag is-info is-large" id="count"></span>
 
 </div>
-
+<br>
 <script>
 
 function genhourarray() {
