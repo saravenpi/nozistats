@@ -99,7 +99,7 @@
 		}
 
 		document.getElementById('count').innerHTML = lastdaycount();
-		document.getElementById("hourcount").innerHTML = < %= data.traffic % > ;
+		document.getElementById("hourcount").innerHTML = <%= data.traffic %> ;
 		console.log()
 		var ctx = document.getElementById('hourchart');
 		var hourchart = new Chart(ctx, {
