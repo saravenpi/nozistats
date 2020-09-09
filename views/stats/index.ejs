@@ -98,8 +98,28 @@
 
 		}
 
+
+		function truelastdaycount() {
+
+			var array = [ <%= data.truearray %> , <%= data.truetraffic %> ]
+			var total = 0;
+			for (var i in array) {
+				total += array[i];
+			}
+			return total
+
+
+		}
+
+
+
 		document.getElementById('count').innerHTML = lastdaycount();
+		document.getElementById('truecount').innerHTML = truelastdaycount();
+
+
 		document.getElementById("hourcount").innerHTML = <%= data.traffic %> ;
+
+		document.getElementById("truehourcount").innerHTML = <%= data.truetraffic %> ;
 		console.log()
 		var ctx = document.getElementById('hourchart');
 		var hourchart = new Chart(ctx, {
@@ -112,6 +132,14 @@
 					data: [ <%= data.array %> , <%= data.traffic %> ],
 					backgroundColor: "#a88460",
 					borderColor: "#654321",
+					borderWidth: 1
+				},
+				{
+
+					label: 'Unique users traffic every hour',
+					data: [ <%= data.truearray %> , <%= data.truetraffic %> ],
+					backgroundColor: "#ca73ff",
+					borderColor: "#b53dff",
 					borderWidth: 1
 				}]
 			},
@@ -145,6 +173,13 @@
 					data: [ <%= data.day %> , lastdaycount()],
 					backgroundColor: "#ffdd57",
 					borderColor: "#e3b502",
+					borderWidth: 1
+				},{
+
+					label: 'Uniquesers traffic every day',
+					data: [ <%= data.trueday %> , truelastdaycount()],
+					backgroundColor: "#ff7f00",
+					borderColor: "#c9721c",
 					borderWidth: 1
 				}]
 			},
