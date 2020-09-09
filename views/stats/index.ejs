@@ -156,7 +156,7 @@
 
 					label: 'Launches traffic every hour',
 					data: [ <%= data.array %> , <%= data.traffic %> ],
-					backgroundColor: "rgba(168, 132, 96, 0.1)",
+					backgroundColor: "rgba(168, 132, 96, 0.3)",
 					borderColor: "#654321",
 					borderWidth: 1
 				},
@@ -164,7 +164,7 @@
 
 					label: 'Unique users traffic every hour (list of users refreshed daily)',
 					data: [ <%= data.truearray %> , <%= data.truetraffic %> ],
-					backgroundColor: "rgba(202, 115, 255, 0.1)",
+					backgroundColor: "rgba(202, 115, 255, 0.3)",
 					borderColor: "#b53dff",
 					borderWidth: 1,
 					lineTension: 0
@@ -198,14 +198,14 @@
 
 					label: 'Launches traffic every day',
 					data: [ <%= data.day %> , lastdaycount()],
-					backgroundColor: "rgba(255, 221, 87, 0.1)",
+					backgroundColor: "rgba(255, 221, 87, 0.3)",
 					borderColor: "#e3b502",
 					borderWidth: 1
 				},{
 
 					label: 'Unique users traffic every day',
 					data: [ <%= data.trueday %> , truelastdaycount()],
-					backgroundColor: "rgba(255, 127, 0, 0.1)",
+					backgroundColor: "rgba(255, 127, 0, 0.3)",
 					borderColor: "#c9721c",
 					borderWidth: 1,
 					lineTension: 0
