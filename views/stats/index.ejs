@@ -29,7 +29,7 @@
 <body>
 
 	<div class="notification is-primary title is-3">
-		<u>Chart of the number of users per hour during the last 24 hours, refreshed every hour:</u>
+		<u>Chart of the number of launches and unique users per hour during the last 24 hours, refreshed every hour:</u>
 	</div>
 	<br>
 	<div class="chart-container" style="position: relative; height:100%; width:100%">
@@ -37,14 +37,15 @@
 		<canvas id="hourchart"></canvas>
 
 	</div>
-
+	<br>
+	<br>
 
 
 
 	<br>
 	<p></p>
 	<div class="notification is-primary is-medium">
-		Amount of users during the last hour:
+		Amount of launches during the last hour:
 		<span class="tag is-danger is-large" id="hourcount"></span>
 
 	</div>
@@ -54,11 +55,13 @@
 		<span class="tag is-info is-large" id="truehourcount"></span>
 
 	</div>
+
+
 	<br>
 
 
 	<div class="notification is-warning title is-3">
-		<u>Chart of the number of users per day during the last week, refreshed everyday:</u>
+		<u>Chart of the number of launches and unique users per day during the last week, refreshed everyday:</u>
 	</div>
 
 	<br>
@@ -66,10 +69,13 @@
 	<div class="chart-container" style="position: relative; height:100%; width:100%">
 		<canvas id="daychart"></canvas>
 	</div>
+
+	<br>
+	<br>
 	<br>
 	<p></p>
 	<div class="notification is-warning is-medium">
-		Amount of users the last 24 hours:
+		Amount of launches the last 24 hours:
 		<span class="tag is-danger is-large" id="count"></span>
 
 	</div>
@@ -148,7 +154,7 @@
 				labels: genhourarray(),
 				datasets: [{
 
-					label: 'Users traffic every hour',
+					label: 'Launches traffic every hour',
 					data: [ <%= data.array %> , <%= data.traffic %> ],
 					backgroundColor: "#a88460",
 					borderColor: "#654321",
@@ -190,7 +196,7 @@
 				labels: ["1", "2", "3", "4", "5", "6", "Today"],
 				datasets: [{
 
-					label: 'Users traffic every day',
+					label: 'Launches traffic every day',
 					data: [ <%= data.day %> , lastdaycount()],
 					backgroundColor: "#ffdd57",
 					borderColor: "#e3b502",
